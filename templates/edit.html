@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Content</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Edit Content</h1>
+    <form method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" value="{{ post.title }}" required><br><br>
+        <label>Content:</label>
+        <textarea name="content">{{ post.content }}</textarea><br><br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
